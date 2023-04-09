@@ -1,0 +1,141 @@
+
+body{
+    background-color: #b20a0a;
+    border: 10px;
+    border-style: solid;
+    border-color: rgb(4, 17, 95);
+}
+
+.row {
+    background-color: bisque;
+    
+}
+
+.nav {
+    background-color: rgb(4, 17, 95);
+    font-size: 20px;
+}
+
+.nav a {
+    color: bisque;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #b20a0a;
+}
+
+.content p {
+    text-align: center;
+}
+
+.content h1 {
+    text-align: center;
+}
+
+.content ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+
+.img img {
+    border: 10px;
+    border-style: solid;
+    border-color: #b20a0a;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.img p {
+    text-align: center;
+}
+
+.weeklyDog p {
+    text-align: center;
+}
+
+.weeklyDog h4 {
+    text-align: center;
+}
+
+.hrs ul {
+    text-align: center;
+}
+
+.hrs li {
+    text-align: center;
+    list-style: none;
+}
+
+.hrs h4 {
+    text-align: center;
+}
+
+.pic {
+    border: 10px;
+    border-style: solid;
+    border-color: #b20a0a;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+form {
+    padding-left: 20px;
+}
+
+form textarea {
+        width: 25%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        resize: none;
+      
+}
+
+form input {
+
+  width: 15%;
+  height: 10px;
+  padding: 12px 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+#subBtn {
+        width: 10%;
+        height: 15px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid bisque;
+        border-radius: 4px;
+        background-color: bisque;
+        resize: none;
+}
+
+.testamonials h3 {
+    text-align: center;
+}
+
+.testamonials blockquote {
+    text-align: center;
+}
+
+footer {background-color: rgb(4, 17, 95);
+    color: white;
+}
+
+footer p {
+    background-color: rgb(4, 17, 95);
+}
