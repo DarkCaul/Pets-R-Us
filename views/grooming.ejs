@@ -4,24 +4,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale="1">
-        <link rel="stylesheet" href="public/styles/styles.css">
+        <link rel="stylesheet" href="/styles/styles.css">
     </head>
     
 <body>
 
     <div class="row">
 
-        <header><!--holder for nav-->
+        <!--header-->
 
-            <nav class="nav">
-                
-                <a href="index.html"><b>Home</b></a>
-                <a href="grooming.html"> <b>Grooming Services</b></a>
-                <a href="contactUs.html"><b>Contact US</b></a>
+            <%- include("../partials/header.ejs") %>
 
-            </nav>
+            <%- include("../partials/nav.ejs") %> 
 
-        </header>
 
         <div><!--holder for title, pic and services-->
 
@@ -36,7 +31,7 @@
             </div>
 
             <div class="img">
-                <img src="public/images/wetDog.jpg" alt="wet">
+                <img src="/images/wetDog.jpg" alt="wet">
                 <P>
                     We understand finding an amazing dog groomer is hard. 
                     Our groomers deliver a wonderful experience for you and your dog. 
@@ -50,9 +45,8 @@
         </div>
         
 <!--footer-->
-        <footer>
-            <p>EitherWorld Productions 2023</p></p>
-        </footer>
+        
+<%- include("../partials/footer.ejs") %>
     
     </div>
 

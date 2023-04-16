@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale="1">
+        <link rel="stylesheet" href="/styles/styles.css">
+        
+    </head>
+    
+<body>
+
+    <div class="row">
+
+        <!--header-->
+
+        <%- include("../partials/header.ejs") %> 
+
+        <!--holder for nav-->
+
+        <%- include("../partials/nav.ejs") %>
+
+ <!--content area-->
+
+            <div class="trainerDiv">
+                <side>
+                    <img src="/images/trainer.jpg" class="trainerImg" alt="trainer">
+                    <h2>Kathy Johnson</h2>
+                </side>
+
+                <main>
+
+                    <H3>Meet Kathy</H3>
+
+                    <p>
+                        I have worked in the field of animal welfare/services for over 16 years holding such positions as animal behaviorist, temperament testing specialist, certified dog trainer, veterinary technician, humane educator and humane law enforcement officer.
+
+                        In addition to the many services I offer for you and your canine companion, I am incredibly proud to be a trainer for a variety of organizations.  I am a mentor trainer for the CATCH Trainers Academy and Animal Behavior College, helping dog training hopefuls reach their personal career success as well as train service dogs for several different organizations.   It is extremely rewarding work to be part of these amazing programs. In addition I am often called upon to act as a canine behavior expert for a variety of dog aggression court proceedings.  I also spend quite a bit of time with various volunteer projects at local animal rescues and serve on the board of directors.   Rescue has always been a strong part of who I am and my passion; so I am forever great full for such a wonderful collaboration.
+                    </p>
+
+                </main>
+
+            </div>
+
+            <div class="trainTable">
+                <h2>Pricing</h2>
+
+                <table>
+                    <tr>
+                        <th>Ages</th>
+                        <th>Service 1</th>
+                        <th>Service 2</th>
+                    </tr>
+                    <tr>
+                        <td>6 months to 1 year</td>
+                        <td>Basics <br>$150.00</td>
+                        <td>Behavior <br>$200.00</td>
+                    </tr>
+                    <tr>
+                        <td>2 years to 6 years</td>
+                        <td>Core training <br>$200.00</td>
+                        <td>Percison <br>$167.00</td>
+                    </tr>
+                    <tr>
+                        <td>7 years to 12 years</td>
+                        <td>Early Bird Refesher <br>$100.00</td>
+                        <td>Relaxation Therapy <br>$50.00</td>
+                    </tr>
+                </table>
+
+            </div>
+
+
+
+
+ 
+<!--footer-->
+
+<%- include("../partials/footer.ejs") %>
+
+    </div>
+
+</body>
+</html>

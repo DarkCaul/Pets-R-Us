@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale="1">
+        <link rel="stylesheet" href="/styles/styles.css">
+        
+    </head>
+    
+<body>
+
+    <div class="row">
+
+        <!--header-->
+
+        <%- include("../partials/header.ejs") %> 
+
+        <%- include("../partials/nav.ejs") %> 
+        
+ <!--content area-->
+<div class="sidebar-layout">
+    
+ <side class="left">
+    <h2>Pricing</h2>
+    <ul>
+        <li>1 guest</li>
+            <ul>
+                <li>5 nights $75.00</li>
+                <li>6 to 10 nights $150</li>
+            </ul>
+        <li>2 guests</li>
+            <ul>
+                <li>5 nights $135.00</li>
+                <li>6 to 10 nights $250</li>
+            </ul>
+        <li>3 guests</li>
+            <ul>
+                <li>5 nights $175.00</li>
+                <li>6 to 10 nights $320</li>
+            </ul>
+    </ul>
+ </side>
+
+ <main>
+
+    <div class="center">
+        
+        <div class="slide fade">
+            <img src="/images/dogFlag.jpg" alt="dogFlag">
+        </div>
+        <div class="slide fade">
+            <img src="/images/dogRun.jpg" alt="dogRun">
+        </div>
+
+    </div>
+</main>
+
+<side class="right">
+    
+    <p>We are a caring staff who enjoy spending our days entertaining and caring for your beloved pets. Every pet is treated as if they are our own. <br>
+        Size Doesn't Matter<br>
+        We try to provide your pet with the best experience possible while not being at home.  We encourage you to bring any items for your pet that will make it feel like home for them.<br>
+        
+        We offer overnight boarding with daycare as well as boarding only options. Daycare playtime is included with our regular boarding option. 
+        Dogs in boarding only have multiple individual visits to an exercise yard each day. All dogs have separate kennels with a blanket and water. Multiple dogs from the same household may share a kennel.<br>
+        
+        Requirements for for boarding are:<br>
+        
+        <ul>
+            <li>Dogs must be at least 8 weeks or older.</li>
+            <li>must not show aggression towards staff, including in the presence of food or toys<li>
+            <li> female dogs must not be in heat<li>
+            <li>Written proof of rabies, distemper/parvo, and bordatella vaccinations must be on file 
+                and current prior to and throughout the duration of any visit.<br>
+                Year-round flea and tick preventatives are recommended<li>
+            <li>All dogs must be in good health and free of any condition that could potentially 
+                jeopardize other guests (ie. Fleas, ticks, illness, etc.)<li>
+            <li>All dog must have a complete, up to date and approved application on file.<li>
+            <li>All dogs must have completed an initial screening appointment prior to their first visit.</li>
+        </ul>
+ </side>
+
+</div>
+
+ 
+<!--footer-->
+
+<%- include("../partials/footer.ejs") %>
+
+</div>
+
+</body>
+</html>

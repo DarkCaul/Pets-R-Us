@@ -3,9 +3,8 @@
 
 body{
     background-color: #b20a0a;
-    border: 10px;
-    border-style: solid;
-    border-color: rgb(4, 17, 95);
+    
+   
 }
 
 .row {
@@ -13,9 +12,22 @@ body{
     
 }
 
+header h1 {
+
+    text-align: center;
+    font-size: 50px;
+    color: rgb(4, 17, 95);
+    background-color: bisque;
+    margin: 0%;
+    border: 10px solid;
+    border-color: rgb(4, 17, 95);
+}
+
 .nav {
     background-color: rgb(4, 17, 95);
     font-size: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 .nav a {
@@ -40,6 +52,10 @@ body{
     text-align: center;
 }
 
+.contentBottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 .img img {
     border: 10px;
@@ -91,7 +107,7 @@ form {
 }
 
 form textarea {
-        width: 25%;
+        width: 50%;
         height: 150px;
         padding: 12px 20px;
         box-sizing: border-box;
@@ -140,4 +156,98 @@ footer {background-color: rgb(4, 17, 95);
 
 footer p {
     background-color: rgb(4, 17, 95);
+    padding-top: 10px;
+}
+
+.sidebar-layout {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.trainerImg {
+    border: 10px;
+    border-style: solid;
+    border-color: #b20a0a;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    
+}
+
+.trainerDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 50px;
+    padding-right: 50px;
+}
+
+.trainerDiv h2 {
+    text-align: center;
+}
+
+.trainerDiv main {
+    display: block;
+    text-align: center;
+
+}
+
+.trainerDiv main p {
+    background-color: #f8f8f8;
+    width: fit-content;
+}
+
+.trainTable {
+    margin-top: 50px;
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(4, 17, 95);
+    width: 400px; 
+    margin: auto;
+    background-color: #f8f8f8;
+
+    
+
+}
+.trainTable tr {
+    
+    padding-left: 50px;
+   
+
+}
+
+.trainTable td {
+    padding-left: 40px;
+}
+
+.trainTable h2 {
+    text-align: center;
+}
+
+.center {
+    
+    margin: auto;
+    max-width: 1000px;
+    position: relative;
+    padding-top: 20px;
+   
+}
+
+.center img {
+    border: 10px;
+    border-style: solid;
+    border-color: #b20a0a;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.right {
+    padding-right: 20px;
+}
+
+.left {
+    padding-left: 20px;
+
 }

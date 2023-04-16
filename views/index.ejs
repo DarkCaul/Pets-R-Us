@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale="1">
-        <link rel="stylesheet" href="public/styles/styles.css">
+        <link rel="stylesheet" href="/styles/styles.css">
         
     </head>
     
@@ -12,25 +12,28 @@
 
     <div class="row">
 
-        <header><!--holder for nav-->
-            <nav class="nav">
-                
-                <a href="index.html"><b>Home</b></a>
-                <a href="grooming.html"> <b>Grooming Services</b></a>
-                <a href="contactUs.html"><b>Contact US</b></a>
+        <!--header-->
 
-            </nav>
+        <%- include("../partials/header.ejs") %> 
 
-        </header>
+        <%- include("../partials/nav.ejs") %> 
+ 
 
 <div><!--holder for title, pic and hours-->
     <div class="content">
-        <h1><b>Pets R Us</b></h1>
-        <p>.......content.....</p>
+        
+        <p>With people who have a shared passion for caring for dogs. We have over 10 years of experience in the pet industry and are beyond excited to welcome your dog as part of our family!<br>
+            your dogs happiness, safety, and well-being is our top priority. Your dog will have plenty of exercise in our (2,000 sq. ft yard) during their 3-5 let outs during the day.  You have 
+            the option of choosing from two boarding spots in our facility. Standard Kennel rooms are a cozy option for your pup and each kennel has access to an outdoor run.  You can also treat 
+            your dog to ultimate comfort in one of our four luxury suites.we strive to provide our clients with the best service possible. 
+            Our chief mission is to provide your dog with a safe environment to experience the benefits of socialization and exercise while you are at work or out-of-town, or any other time you 
+            want your dog to have a good time.
+            During your dog’s stay, we offer small groups of socialized dog care, as well as individual, non-socialized dog care, depending on your dogs individual personality and needs. Check out some of our add-on services to give your pup some extra TLC during their stay!
+        </p>
     </div>
 
     <div class="img">
-        <img src="public/images/catDog.jpg" alt="catDog">
+        <img src="/images/catDog.jpg" alt="catDog">
         <P>
             Address: 124 highland ave, nowhere usa
         </P>
@@ -48,15 +51,17 @@
         </ul>
     </div>
 
-    <div class="weeklyDog">
+    <div class="contentBottom">
+    <side class="weeklyDog">
 
         <h4><b><i>Dog of the Week</i></b></h4>
-        <p>......</p>
-        <img class="pic" src="public/images/stella.jpg" alt="weeklyDog">
+        <p>This is stella. Stella is a sweet shih tzu who loves to play
+             and interact with all types of animals.</p>
+        <img class="pic" src="/images/stella.jpg" alt="weeklyDog">
         
-    </div>
+    </side>
 
-    <div class="form">
+    <main class="form">
 
         <p style="padding: 20px;">Contact US</p>
         <form id="usrForm">
@@ -68,8 +73,8 @@
                 <textarea name="comment" form="usrForm"></textarea><br>
             <input type="submit" id="subBtn" value="submit">
         </form>
+    </main>
     </div>
-
 
 <div><!--holder for testamaonials and contact form-->
 
@@ -85,9 +90,9 @@
 
 </div>
 
-<footer>
-    <p>EitherWorld Productions 2023</p></p>
-</footer>
+<!--footer-->
+
+<%- include("../partials/footer.ejs") %>
 
 </div>
 
