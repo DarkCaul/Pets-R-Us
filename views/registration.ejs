@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale="1">
+        <link rel="stylesheet" href="/styles/styles.css">
+        
+    </head>
+    
+<body>
+
+    <div class="row">
+
+        <!--header-->
+
+        <%- include("../partials/header.ejs") %> 
+
+        <!--holder for nav-->
+
+        <%- include("../partials/nav.ejs") %>
+
+ <!--content area-->
+
+    <div class="regDiv">
+        <h1>Registar</h1>
+        <form class="regForm" action="/customers" method="post">
+
+            <label for="customerId">Username: </label>
+            <input type="text" name="customerId" id="customerId"><br>
+            <label for="email">Email: </label>
+            <input type="email" name="email" style="margin-left: 27px;"><br>
+            <label for="password">Password:  </label>
+            <input type="password" name="password" style="margin-left: 5px;"><br>
+            <input type="submit" value="Submit" id="subBtn" style="width: 70px;">
+
+        </form>
+    </div>
+
+
+
+
+
+ 
+<!--footer-->
+
+<%- include("../partials/footer.ejs") %>
+
+    </div>
+
+</body>
+</html>

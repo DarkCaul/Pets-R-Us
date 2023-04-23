@@ -251,3 +251,23 @@ footer p {
     padding-left: 20px;
 
 }
+
+.regDiv {
+    margin: auto;
+    margin-top: 20px;
+    width: 20%;
+    border: 3px solid #b20a0a;
+    padding: 10px;
+    
+}
+
+.regForm input{
+   
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;;
+
+
+}
+
