@@ -20,7 +20,7 @@ app.use('/styles', express.static(__dirname + 'public/styles'));
 app.use('/images', express.static(__dirname + 'public/images'));
 
 
-app.use(express.urlencoded({ extended: true })); // added during week 6 assignment
+app.use(express.urlencoded({ extended: true })); 
 app.use(express.json());
 
 
@@ -60,20 +60,24 @@ app.get('/registration', (req, res) => {
     res.render('registration');
 });
 
+//renders customer list page
+app.get('/customer-list', (req, res) => {
+    res.render('customer-list');
+});
+
 app.post('./customers', (req, res, next) => {
     console.log(req.body);
-    console.log(req.body.fruitName)
+    console.log(req.body.customerId);
+    console.log(req.body.email);
+    console.log(req.body.password);
+    const newCustomer = new Customer({
+    customerId: customerId,
+    email: email,
+    password: password
 });
+    console.log(newCustomer);
 
-const customerId = req.body.customerId;
-const email = req.body.email;
-const password = req.body.password;
 
-const newCustomer = new Customer({
-    customerId,
-    email,
-    password
-});
 
 Customer.create(newCustomer, function(err, customer) {
     if (err) {
@@ -82,6 +86,19 @@ Customer.create(newCustomer, function(err, customer) {
         res.render('index', {})
     }
 });
+});
+
+app.get('/customers',(req, res) => {
+    Customer.find({}, function(err, customer) {
+        if (err) {
+            console.log(err);
+            next (err);
+    }else{
+        res.render('customer-list',)
+    }})
+})
+
+
 
 //listening on port 3000
 app.listen(port, () => console.log(`listening on port ${port}`));
