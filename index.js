@@ -4,8 +4,10 @@ const express = require("express");
 const path = require("path");
 const port = process.env.PORT || 3000;
 const mongoose = require("mongoose");
+const fs = require("fs"); 
 
 const Customer = require('./models/customers');
+const appointment = require('./models/appointment');
 
 const app = express();
 
@@ -35,7 +37,7 @@ mongoose.connect(connect).then(() => {
 });
 
 //renders homepage
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index');
 });
 
@@ -63,6 +65,11 @@ app.get('/registration', (req, res) => {
 //renders customer list page
 app.get('/customer-list', (req, res) => {
     res.render('customer-list');
+});
+
+//renders appoinments page
+app.get('/appointment', (req, res) => {
+    res.render('appointment');
 });
 
 app.post('./customers', (req, res, next) => {
@@ -94,9 +101,28 @@ app.get('/customers',(req, res) => {
             console.log(err);
             next (err);
     }else{
-        res.render('customer-list',)
+        res.render('customer-list')
     }})
 })
+
+app.post('./appointment', (req, res, next) => {
+    const newAppointment = new Appointment({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        service: req.body.service
+    });
+
+    appointment.create(newAppointment, function(err, appointment){
+        if (err) {
+            console.log(err);
+            next(err);
+        } else {
+            res.render('appointment-list');
+        }
+        
+    });   
+});
 
 
 

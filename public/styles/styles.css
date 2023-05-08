@@ -28,7 +28,9 @@ header h1 {
     font-size: 20px;
     padding-left: 10px;
     padding-bottom: 10px;
-}
+}   
+      
+
 
 .nav a {
     color: bisque;
@@ -38,6 +40,8 @@ header h1 {
 .nav a:hover {
     color: #b20a0a;
 }
+
+
 
 .content p {
     text-align: center;
@@ -285,5 +289,29 @@ hr {
 }
 
 
+.apptDiv {
+    margin: auto;
+    margin-top: 20px;
+    width: 300px;
+    border: 5px solid #b20a0a;
+    border-style: double;
+    padding: 10px;
+    
+}
 
+.apptForm input{
+   
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+   
+   
+}
+
+.subBtn2{
+    border-color: green;
+    margin-left: 200px;
+    margin-top: 15px;
+}
 
