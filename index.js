@@ -67,9 +67,14 @@ app.get('/customer-list', (req, res) => {
     res.render('customer-list');
 });
 
-//renders appoinments page
+//renders appoinment page
 app.get('/appointment', (req, res) => {
     res.render('appointment');
+});
+
+//renders my-appoinments page
+app.get('/my-appointments', (req, res) => {
+    res.render('my-appointments');
 });
 
 app.post('./customers', (req, res, next) => {
@@ -123,6 +128,19 @@ app.post('./appointment', (req, res, next) => {
         
     });   
 });
+
+
+
+app.get('/api/appointment/:lastName', async(req, res, next) => {
+    appointment.find({}, function(err, appointment) {
+        if (err) {
+            console.log(err);
+            next(err);
+        } else {
+            res.json(my-appointment);
+        }
+    })
+})
 
 
 

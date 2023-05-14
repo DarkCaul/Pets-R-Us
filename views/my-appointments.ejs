@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale="1">
+        <link rel="stylesheet" href="/styles/styles.css">
+        
+    </head>
+    
+<body>
+
+    <div class="row">
+
+        <!--header-->
+
+        <%- include("../partials/header.ejs") %> 
+
+        <!--holder for nav-->
+
+        <%- include("../partials/nav.ejs") %>
+
+ <!--content area-->
+    <div class="card"><!--card container-->
+
+        <div class="card-title"><!--card title-->
+            <h1>My Appointment List</h1>
+            <hr>
+            <p id="customerList"></p>
+        </div>
+
+
+        <div class="card-content"><!--card body-->
+
+            <div class="form">
+                <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName">
+                    <button type="submit" value="Search" id="search" >Submit</button>
+            
+                </div>
+
+                
+        </div>
+
+    </div><!--end card-->
+
+    <script>
+         document.getElementById('search').onclick = function() {
+            const firstName = document.getElementById('lastName').value;
+        
+            fetch('/api/appointment/' + firstName)
+                    .then(res => res.json())
+                    .then(data => {
+                    let tableString = `<br /><h4 style="font-size: 32px; text-align: center; padding-bottom: 10px; font-weight: lighter">My Orders</h4><table id="orders" style="width: 100%;" class="table full-width"><tr><th>First name</th><th>Last name</th><th>Payment</th></tr>`;
+        
+                    for (let appointment of data) {
+                        tableString += `<tr><td>${appointment.firstName}</td><td>${appointment.lastName}</td><td>${appointment.userName}</td><td>${appointment.email}</td><td>${appointment.service}</td></tr>`;
+                    }
+        
+                    tableString += `</table>`;
+        
+                    document.getElementById('my-appointments').innerHTML = tableString;
+                    });
+        }
+    
+    </script>
+
+                
